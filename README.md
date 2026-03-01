@@ -97,7 +97,7 @@ When deployed via its Helm chart, Fortsa is configured with RBAC permissions to 
 actions necessary for its operation, on only the objects it needs to act upon.
 
 The only changes Fortsa makes within a running Kubernetes cluster are to update pods’ controllers
-(typically Deployments, DaemonSets, or ReplicaSets) with a well-known annotation. Adding or
+(typically Deployments, DaemonSets, and StatefulSets) with a well-known annotation. Adding or
 updating this annotation is what causes the controller to initiate a controlled restart of the
 pods. This is in fact the same exact mechanism used by the command-line tool `kubectl` when issuing
 a `rollout restart`.
